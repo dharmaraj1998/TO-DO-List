@@ -8,7 +8,8 @@ const songSlice = createSlice({
       state.push(action.payload);
     },
     removeSong(state, action) {
-      state.pop(action.payload);
+        const index = state.indexOf(action.payload);
+        state.splice(index, 1);
     },
   },
 });
@@ -20,7 +21,8 @@ const movieSlice = createSlice({
       state.push(action.payload);
     },
     removeMovie(state, action) {
-      state.pop(action.payload);
+        const index = state.indexOf(action.payload);
+        state.splice(index, 1);
     },
   },
 });
